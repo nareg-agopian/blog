@@ -15,7 +15,7 @@ class Database {
         $this->password = $password;
         $this->database = $database;
 
-        $connection = new mysqli($host, $username, $password);
+        $this->connection = new mysqli($host, $username, $password);
 
         if ($this->connection->connect_error) {
             die("<p>Error: " . $this->connection->connect_error . "</p>");
@@ -39,13 +39,13 @@ class Database {
     public function openConnection() {
         $this->connection = new mysqli($this->host, $this->username, $this->password, $this->database);
 
-        if ($connection->connect_error) {
+        if ($this->connection->connect_error) {
             die("<p>Error: " . $this->connection->connect_error . "</p>");
         }
     }
 
     public function closeConnection() {
-        if (iset($this->connection)) {
+        if (isset($this->connection)) {
             $this->connection->close();
         }
     }
