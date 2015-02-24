@@ -2,17 +2,10 @@
     require_once(__DIR__ . "/../model/cofig.php");
 ?>
 
+<h1>Login</h1>
 
-<h1>Register</h1>
-
-<form method="post" action="<?php echo $path . "controller/create/post.php"; ?>">
-    <div>
-        <label for="email">Email: </label>
-        <input type="text" name="email" />
-    </div>
-    
-    <div>
-        <label for="username">Username: </label>
+<form method="post" action="<?php echo $path . "controller/login-user.php"?>">
+    <label for="username">Username: </label>
         <input type="text" name="username" />
     </div>
     
@@ -25,4 +18,3 @@
          <button type="submit">Submit</button>
     </div>
 </form>
-
