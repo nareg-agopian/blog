@@ -17,7 +17,7 @@ if ($query) {
 
 $query = $_SESSION["connection"]->query("CREATE TABLE USERS ("
        . "id int(11) NOT NULL AUTO_INCREMENT,"
-       . "username Varcher(30) NOT NULL,"
+       . "username varchar(30) NOT NULL,"
        . "email varchar(50) NOT NULL,"
        . "password char(128) NOT NULL,"
        . "salt char(128) NOT NULL,"

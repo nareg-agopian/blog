@@ -11,7 +11,7 @@
         
         $hashedPassword = crypt($password, $salt);
         
-        $query = $_SESSION["connection"]->query("INSRET INTO USERS SET"
+        $query = $_SESSION["connection"]->query("INSERT INTO USERS SET"
                . "email = '$email',"
                . "username = '$username',"
                . "password = '$hashedPassword',"
